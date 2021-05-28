@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-var itemList = ['A-Apple', 'B-Ball', 'C-Cat']
+// var itemList = ['A-Apple', 'B-Ball', 'C-Cat']
 
 class List extends Component {
     constructor(props) {
@@ -8,7 +8,8 @@ class List extends Component {
 
         this.state = {
             value: '',
-            itemList
+            itemList: [],
+            reset:[]
         }
     }
 
@@ -27,11 +28,16 @@ class List extends Component {
     }
 
     onCleanArray() {
+        const reset = this.state.itemList
         const itemList = []
-        this.setState({ itemList })
+        this.setState({ itemList, reset })
     }
     onResetArray() {
-        this.setState({ itemList })
+        console.log(this.state.itemList);
+        if (this.state.itemList.length === 0){
+            const itemList = this.state.reset
+            this.setState({ itemList })
+        }
     }
 
     render() {
@@ -42,7 +48,6 @@ class List extends Component {
                         <h3 key={index}>{item}</h3>
                         <button className="btn btn-light mt-2 mb-4" onClick={() => this.onRemoveItem(index)}>Remove</button>
                     </div>
-
                 ))}
                 <input type="text" value={this.state.value} onChange={this.onChangeValue} />
                 <br />
