@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { v4 as uuidv4 } from 'uuid';
 
 class List extends Component {
     constructor(props) {
@@ -49,7 +49,7 @@ class List extends Component {
                     console.log(item, index)
                     return(
                     <div>
-                        <h3 key={index}>{item}</h3>
+                        <h3 key={uuidv4}>{item}</h3>
                         <button className="btn btn-light mt-2 mb-4" onClick={() => this.onRemoveItem(index)}>Remove</button>
                     </div>)
                 })}

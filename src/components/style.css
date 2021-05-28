@@ -13,10 +13,7 @@
 }
 
 .container {
-    justify-content: center;
     background-color:rgb(70, 37, 104);
-    /* margin: 0px 400px; */
     padding-bottom: 50px;
     padding: 15px;
-    border-radius: 15px;
 }
