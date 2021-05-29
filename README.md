@@ -5,6 +5,7 @@
 - After completion of task you can delete it.
 - you can delete all the task in one go also.
 - you can reset the previous task also.
+- Error handling while wrong url.
 
 ### How to run this project
 - clone the project

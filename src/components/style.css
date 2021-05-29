@@ -1,7 +1,3 @@
-.font {
-    color: aliceblue;
-}
-
 .title{
     font-weight: 400;
     font-size: 60px;
@@ -12,8 +8,3 @@
     font-size: 30px;
 }
 
-.container {
-    background-color:rgb(70, 37, 104);
-    padding-bottom: 50px;
-    padding: 15px;
-}
